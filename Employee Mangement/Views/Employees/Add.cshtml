@@ -1,0 +1,32 @@
+﻿@model ASP.NET_CRUD_Operation_Project.Models.AddEmployeeViewModel
+@{
+    ViewData["Title"] = "Add Employee Details";
+}
+<h1 class="text-center mt-5">Add Employee</h1>
+<form method="post" action="Add" class="mt-5" style="">
+    <div class="m-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" required>
+    </div>
+    <div class="m-3">
+        <label id="label" for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth" required>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department" required>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary" required>
+    </div>
+    <div class="m-3 mb-5">
+        <label for="" class="form-label">Date Of Joining</label>
+        <input type="date" class="form-control" asp-for="DateOfJoining" required>
+    </div>
+
+    <div class="text-center m-3">
+    <button type="submit" class="btn btn-outline-primary">Submit</button>
+    <button type="submit" onclick="window.location.href = '/Home'" class="btn btn-outline-dark">Back</button>
+    </div>
+</form>

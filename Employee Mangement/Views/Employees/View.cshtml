@@ -1,0 +1,36 @@
+﻿@model ASP.NET_CRUD_Operation_Project.Models.UpdateEmployeeViewModel
+@{
+    ViewData["Title"] = "Employee Details";
+}
+<h1 class="text-center mt-5">Update Employee</h1>
+<form method="post" action="View" class="mt-5">
+    <div class="m-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name" required>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Date Of Birth</label>
+        <input type="date" class="form-control" asp-for="DateOfBirth" required>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Department</label>
+        <input type="text" class="form-control" asp-for="Department" required>
+    </div>
+    <div class="m-3">
+        <label for="" class="form-label">Salary</label>
+        <input type="number" class="form-control" asp-for="Salary" required>
+    </div>
+    <div class="m-3 mb-5">
+        <label for="" class="form-label">Date Of Joining</label>
+        <input type="date" class="form-control" asp-for="DateOfJoining" required>
+    </div>
+    <div class="text-center m-3">
+        <button type="submit" class="btn btn-outline-primary">Update</button>
+        <button type="submit" class="btn btn-outline-danger" asp-action="Delete" asp-controller="Employees">Delete</button>
+        <button type="submit" onclick="window.location.href = '/Home'" class="btn btn-outline-dark">Back</button>
+    </div>
+</form>
